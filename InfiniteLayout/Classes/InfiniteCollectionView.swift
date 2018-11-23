@@ -198,7 +198,7 @@ extension InfiniteCollectionView: UICollectionViewDelegate {
         self.infiniteLayout.centerCollectionViewIfNeeded(indexPath: self.preferredCenteredIndexPath)
     }
     
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    open func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         if isItemPagingEnabled {
             self.infiniteLayout.centerCollectionView(withVelocity: velocity, targetContentOffset: targetContentOffset)
         }
